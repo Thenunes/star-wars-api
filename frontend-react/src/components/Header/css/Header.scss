@@ -1,0 +1,78 @@
+@import '../../../css/vars';
+
+.header{
+    position: relative;
+    height: 65px;
+	width: 100%;
+    //box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid $color-neutral-G;
+
+    .right_menu{
+        float:right;
+
+        .btn{
+            color: #fff !important;
+            background-color: $color-accent-green-D;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 32px;
+            padding: 0px 15px 0px 15px;
+            margin: 17px 20px 16px 10px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $color-accent-green-C;
+            }
+        }
+    }
+
+    .login_btn{
+        float: left;
+    }
+}
+
+.header .module_menu{
+
+    .dropdown{
+        margin: 12px 10px 13px 10px;
+        float: left;
+
+        .icon{
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 8px;
+            cursor: pointer;
+
+            &::before{
+                transform: rotate(90deg);
+                display: inline-block;
+            }
+        }
+    }
+
+    .logo{
+        float: left;
+        height: 40px;
+        margin: 12px 10px 13px 25px;
+        cursor: pointer;
+
+        img{
+            height: 100%;
+        }
+    }
+}
+
+
+.header .profile_menu{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 12px 25px 13px 20px;
+
+    img{
+        width: 100%;
+        border-radius: 50%;
+    }
+}

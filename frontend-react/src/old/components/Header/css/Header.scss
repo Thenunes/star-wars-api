@@ -1,0 +1,29 @@
+@import '../../../css/vars';
+.header{
+	width: 100%;
+    //box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
+    display: inline-block;
+}
+
+.header__content{
+    height: 45px;
+    max-width: $full-size;
+    padding-right: 65px;
+    padding-left: 65px;
+    margin: 10px auto 10px auto;
+    box-sizing: content-box;
+}
+
+.header__logo{
+	height: 100%;
+    float: left;
+
+	img{
+		height: 100%;
+	}
+}
+
+.header__menu{
+	height: 100%;
+    float: right;
+}

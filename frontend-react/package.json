@@ -1,0 +1,27 @@
+{
+  "name": "biblia-social",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aws-amplify": "^1.1.38",
+    "axios": "^0.18.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-input-range": "^1.3.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start --env=development",
+    "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://sb-prod-react --acl public-read",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "remote-redux-devtools": "^0.5.16"
+  }
+}

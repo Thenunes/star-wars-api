@@ -1,0 +1,11 @@
+image: nikolaik/python-nodejs
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - npm install
+            - npm run build
+            - pip install awscli --upgrade --ignore-installed six
+            - npm run deploy

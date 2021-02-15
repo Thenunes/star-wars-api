@@ -1,0 +1,9 @@
+.person__button {
+  position: absolute;
+  right: 0px;
+  top: 20px; }
+  .person__button .btn {
+    height: 50px;
+    padding: 0px 20px 0px 20px; }
+
+/*# sourceMappingURL=Person.css.map */
