@@ -2,6 +2,9 @@
 
 #React
 
+Frontend - React
+--------------
+
 ### Configurar Projeto
 ```
 Alterar variavel apiUrl em src/config.js com a URL do backend
@@ -19,9 +22,8 @@ Exemplo:
     npm start
 ```
 
+Backend - Symfony
 --------------
-
-#Symfony 5.0
 
 [Download Symfony][4]
 
