@@ -27,10 +27,26 @@ final class Version20210213225435 extends AbstractMigration
         $this->addSql('ALTER TABLE person ADD CONSTRAINT FK_34DCD176D5436AB7 FOREIGN KEY (specie_id) REFERENCES specie (id)');
         $this->addSql('ALTER TABLE person_film ADD CONSTRAINT FK_8A23A09217BBB47 FOREIGN KEY (person_id) REFERENCES person (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE person_film ADD CONSTRAINT FK_8A23A09567F5183 FOREIGN KEY (film_id) REFERENCES film (id) ON DELETE CASCADE');
+
+        $this->addSql('ALTER TABLE film ADD api_id INT NOT NULL');
+        $this->addSql('ALTER TABLE person ADD api_id INT NOT NULL');
+        $this->addSql('ALTER TABLE specie ADD api_id INT NOT NULL');
+
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_8244BE2254963938 ON film (api_id)');
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_34DCD17654963938 ON person (api_id)');
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_A28097254963938 ON specie (api_id)');
     }
 
     public function down(Schema $schema) : void
-    {
+    {   
+        $this->addSql('DROP INDEX UNIQ_8244BE2254963938 ON film');
+        $this->addSql('DROP INDEX UNIQ_34DCD17654963938 ON person');
+        $this->addSql('DROP INDEX UNIQ_A28097254963938 ON specie');
+        
+        $this->addSql('ALTER TABLE film DROP api_id');
+        $this->addSql('ALTER TABLE person DROP api_id');
+        $this->addSql('ALTER TABLE specie DROP api_id');
+
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE person_film DROP FOREIGN KEY FK_8A23A09567F5183');
         $this->addSql('ALTER TABLE person_film DROP FOREIGN KEY FK_8A23A09217BBB47');
