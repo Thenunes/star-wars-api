@@ -1,5 +1,7 @@
 #Symfony 5.0
 
+[Download Symfony][4]
+
 ### Configurar Projeto
 ```
 Alterar variavel DATABASE_URL em .env
@@ -20,4 +22,7 @@ Explicação:
     php bin/console doctrine:database:create
 - Load Migrations
     php bin/console doctrine:migrations:migrate
+- Run
+	symfony server:start
 ```
+[4]: https://symfony.com/download
