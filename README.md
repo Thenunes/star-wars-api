@@ -46,6 +46,6 @@ Explicação:
 - Load Migrations
     php bin/console doctrine:migrations:migrate
 - Run
-	symfony server:start
+    symfony server:start
 ```
 [4]: https://symfony.com/download
